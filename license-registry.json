@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updatedAt": "2026-11-25T18:26:24.236Z",
+  "updatedAt": "2026-11-26T17:55:32.503Z",
   "revoked": {},
   "overrides": {
     "lic_20261125_fd3fde": {
@@ -10,5 +10,5 @@
       "expires": "NEVER"
     }
   },
-  "signature": "6_aOd5T-S7wATALnYOChf4nlizsnlYiIZwS8AtiyhYrjD1DtX9HgftH0PViv8ZoZ05i113J4zeZ2-pUzFigDDA"
+  "signature": "frRLQlfLEmri4UL12fvAdXak2vp5WbEesLB4jc4yXpN8jlSRP4TRLKpta1m4y5xSpbP0nO2J4-pJE-XvB9j_AQ"
 }
