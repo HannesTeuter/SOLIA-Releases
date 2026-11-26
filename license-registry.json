@@ -1,0 +1,14 @@
+{
+  "v": 1,
+  "updatedAt": "2026-11-25T18:26:24.236Z",
+  "revoked": {},
+  "overrides": {
+    "lic_20261125_fd3fde": {
+      "expires": "2027-11-25"
+    },
+    "lic_20261125_aaa530": {
+      "expires": "NEVER"
+    }
+  },
+  "signature": "6_aOd5T-S7wATALnYOChf4nlizsnlYiIZwS8AtiyhYrjD1DtX9HgftH0PViv8ZoZ05i113J4zeZ2-pUzFigDDA"
+}

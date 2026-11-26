@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THW FOKUS – Lizenz registrieren &amp; bestellen</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0f2547 0%, #071120 75%);
+      color: #f8fafc;
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 28px 18px 60px 18px;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+    .hero {
+      background: #131c2e;
+      border: 1px solid #253654;
+      border-top: 5px solid #003399;
+      border-radius: 12px;
+      padding: 22px 24px;
+    }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .tier-card {
+      background: #131c2e;
+      border: 2px solid #253654;
+      border-radius: 10px;
+      padding: 18px;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .tier-card:hover { border-color: #60a5fa; transform: translateY(-2px); }
+    .tier-card.selected { border-color: #10b981; background: rgba(16,185,129,0.08); }
+    .price { font-size: 24px; font-weight: 900; color: #60a5fa; margin: 8px 0; }
+    .panel {
+      background: #131c2e;
+      border: 1px solid #253654;
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .lbl { display: block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 4px; }
+    .inp {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 6px;
+      border: 1px solid #253654;
+      background: #0b111e;
+      color: #f8fafc;
+      font-size: 13.5px;
+    }
+    .btn {
+      padding: 11px 16px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 800;
+      font-size: 13.5px;
+      cursor: pointer;
+    }
+    .btn-primary { background: #003399; color: #fff; }
+    .btn-success { background: #10b981; color: #fff; }
+    .btn-ghost { background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid #334155; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <span style="background:#003399; color:#fff; font-size:11px; font-weight:800; padding:3px 9px; border-radius:4px;">THW FOKUS · LIZENZBESTELLUNG</span>
+      <h1 style="margin:10px 0 6px 0; font-size:24px;">Gerät registrieren &amp; Lizenz bestellen</h1>
+      <p style="margin:0; color:#94a3b8; font-size:13.5px; line-height:1.55;">
+        Wähle die passende Lizenzstufe für deinen Zugtrupp oder Ortsverband. Nach Aktivierung läuft THW FOKUS im Einsatz offline.
+      </p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier-card" id="card-SINGLE_BASIC" onclick="selectTier('SINGLE_BASIC')">
+        <strong style="font-size:16px;">Einzelplatz Basis</strong>
+        <div class="price">Günstiger Einzel-PC</div>
+        <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
+          <li>Gebunden an 1 PC (Geräte-ID)</li>
+          <li>Bis zu 1 Tablet im Hotspot</li>
+          <li>ETB, Lagekarte, Schadenskonten, Kräfte, Umzug, Kontakte, Vordrucke &amp; Werkzeuge</li>
+        </ul>
+      </div>
+
+      <div class="tier-card selected" id="card-SINGLE_PRO" onclick="selectTier('SINGLE_PRO')">
+        <strong style="font-size:16px;">Einzelplatz Pro</strong>
+        <div class="price">Komplettpaket 1 PC</div>
+        <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
+          <li>Gebunden an 1 PC (Geräte-ID)</li>
+          <li>Bis zu 4 Tablets im Hotspot</li>
+          <li>Alle Module inkl. BR, ASÜ, Material, Wetter, Stab &amp; Übergabe-PDF</li>
+        </ul>
+      </div>
+
+      <div class="tier-card" id="card-OV_UNLIMITED" onclick="selectTier('OV_UNLIMITED')">
+        <strong style="font-size:16px;">Ortsverband / FüSt (OV-weit)</strong>
+        <div class="price">Alle Geräte im OV</div>
+        <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
+          <li>Keine Geräte-ID-Bindung innerhalb des OV</li>
+          <li>Unbegrenzte Tablets im Hotspot</li>
+          <li>Voller Funktionsumfang + OV-Branding</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3 style="margin:0 0 12px 0; color:#60a5fa;">Registrierungsdaten</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+        <div>
+          <label class="lbl">Ortsverband / Organisation / Name *</label>
+          <input type="text" id="buy-licensee" class="inp" placeholder="z. B. THW OV Neustadt">
+        </div>
+        <div>
+          <label class="lbl">E-Mail für Lizenzschlüssel &amp; Rechnung *</label>
+          <input type="email" id="buy-email" class="inp" placeholder="name@ov-beispiel.de">
+        </div>
+      </div>
+
+      <div id="buy-dev-wrap" style="margin-bottom:12px;">
+        <label class="lbl">Geräte-ID aus THW FOKUS (bei Einzelplatz-Lizenz Pflicht) *</label>
+        <input type="text" id="buy-device" class="inp" style="font-family:Consolas,monospace;" placeholder="FOKUS-XXXX-XXXX-XXXX">
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-success" onclick="submitOrderRequest()">Bestellanfrage / Rechnung anfordern</button>
+        <button type="button" class="btn btn-primary" id="btn-instant-checkout" style="display:none;" onclick="startInstantCheckout()">Direkt online bezahlen (Sofort-Key)</button>
+      </div>
+
+      <div id="order-out-box" style="display:none; margin-top:14px; background:#0b111e; border:1px solid #10b981; border-radius:8px; padding:12px;">
+        <div style="font-weight:800; color:#34d399; font-size:13px; margin-bottom:6px;">Dein Bestellcode ist bereit:</div>
+        <textarea id="order-code-out" class="inp" rows="3" readonly style="font-family:Consolas,monospace; font-size:11.5px;"></textarea>
+        <div style="display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;">
+          <button type="button" class="btn btn-primary" onclick="sendOrderMail()">Per E-Mail absenden</button>
+          <button type="button" class="btn btn-ghost" onclick="copyOrderCode()">Bestellcode kopieren</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // KONFIGURATION: Hier deine Kontakt-E-Mail und optional Stripe / Lemon Squeezy Payment-Links eintragen!
+    const SELLER_EMAIL = 'fokus.softwareinfo@gmail.com';
+    const CHECKOUT_LINKS = {
+      SINGLE_BASIC: '', // Optional: z. B. 'https://dein-shop.lemonsqueezy.com/buy/...'
+      SINGLE_PRO:   '',
+      OV_UNLIMITED: ''
+    };
+
+    let selectedTier = 'SINGLE_PRO';
+    let lastOrderCode = '';
+
+    function selectTier(tier) {
+      selectedTier = tier;
+      document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('selected'));
+      document.getElementById('card-' + tier)?.classList.add('selected');
+      document.getElementById('buy-dev-wrap').style.display = tier === 'OV_UNLIMITED' ? 'none' : 'block';
+      document.getElementById('btn-instant-checkout').style.display = CHECKOUT_LINKS[tier] ? 'inline-block' : 'none';
+    }
+
+    function strToB64Url(str) {
+      const bytes = new TextEncoder().encode(str);
+      let bin = '';
+      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+      return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    function collectOrderData() {
+      const licensee = document.getElementById('buy-licensee').value.trim();
+      const email = document.getElementById('buy-email').value.trim();
+      const deviceId = selectedTier === 'OV_UNLIMITED' ? '*' : document.getElementById('buy-device').value.trim().toUpperCase();
+      if (!licensee || !email) { alert('Bitte Ortsverband/Name und E-Mail eingeben.'); return null; }
+      if (selectedTier !== 'OV_UNLIMITED' && !deviceId.startsWith('FOKUS-')) {
+        alert('Bitte eine gültige Geräte-ID aus THW FOKUS (beginnt mit FOKUS-...) eingeben.');
+        return null;
+      }
+      return { tier: selectedTier, licensee, email, deviceId, createdAt: new Date().toISOString().slice(0, 10) };
+    }
+
+    function submitOrderRequest() {
+      const data = collectOrderData();
+      if (!data) return;
+      lastOrderCode = 'FOKUS-REQ-' + strToB64Url(JSON.stringify(data));
+      document.getElementById('order-code-out').value = lastOrderCode;
+      document.getElementById('order-out-box').style.display = 'block';
+    }
+
+    function copyOrderCode() {
+      if (lastOrderCode) navigator.clipboard.writeText(lastOrderCode).then(() => alert('Bestellcode kopiert.'));
+    }
+
+    function sendOrderMail() {
+      const data = collectOrderData();
+      if (!data) return;
+      const subj = encodeURIComponent(`THW FOKUS Lizenzbestellung (${data.tier}) – ${data.licensee}`);
+      const body = encodeURIComponent(
+        `Hallo,\n\nhiermit möchten wir eine THW FOKUS Lizenz bestellen:\n\n` +
+        `Lizenztyp:  ${data.tier}\n` +
+        `Lizenznehmer: ${data.licensee}\n` +
+        `Geräte-ID:  ${data.deviceId}\n` +
+        `E-Mail:     ${data.email}\n\n` +
+        `Admin-Importcode:\n${lastOrderCode}\n`
+      );
+      window.location.href = `mailto:${SELLER_EMAIL}?subject=${subj}&body=${body}`;
+    }
+
+    function startInstantCheckout() {
+      const data = collectOrderData();
+      if (!data || !CHECKOUT_LINKS[selectedTier]) return;
+      const base = CHECKOUT_LINKS[selectedTier];
+      const sep = base.includes('?') ? '&' : '?';
+      // Übergibt Geräte-ID & OV-Name als Checkout-Metadaten an Lemon Squeezy / Stripe
+      const url = `${base}${sep}checkout[email]=${encodeURIComponent(data.email)}&checkout[custom][device_id]=${encodeURIComponent(data.deviceId)}&checkout[custom][licensee]=${encodeURIComponent(data.licensee)}&checkout[custom][tier]=${encodeURIComponent(data.tier)}`;
+      window.location.href = url;
+    }
+
+    // Automatische Übernahme von ?device=FOKUS-... aus activate.html!
+    (function initBuyPage() {
+      const params = new URLSearchParams(window.location.search);
+      const dev = params.get('device');
+      if (dev) document.getElementById('buy-device').value = dev.toUpperCase();
+      selectTier('SINGLE_PRO');
+    })();
+  </script>
+</body>
+</html>
