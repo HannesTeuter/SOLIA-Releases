@@ -61,6 +61,48 @@
     .btn-primary { background: #003399; color: #fff; }
     .btn-success { background: #10b981; color: #fff; }
     .btn-ghost { background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid #334155; }
+
+    /* Funktionsvergleichstabelle */
+    .cmp-wrap {
+      overflow-x: auto;
+      border: 1px solid #20304c;
+      border-radius: 8px;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      color: #e2e8f0;
+      background: #0f172a;
+    }
+    .cmp-table th, .cmp-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .cmp-table thead th {
+      background: #0b111e;
+      font-size: 13px;
+      font-weight: 800;
+      border-bottom: 2px solid #253654;
+    }
+    .cmp-table tbody tr:hover td:not(.cmp-cat) {
+      background: rgba(59, 130, 246, 0.06);
+    }
+    .cmp-cat {
+      background: #131c2e !important;
+      color: #60a5fa;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 10px 12px !important;
+      border-top: 1px solid #253654;
+    }
+    .cmp-c { text-align: center; width: 120px; }
+    .cmp-yes { color: #34d399; font-weight: 900; font-size: 15px; }
+    .cmp-no  { color: #475569; font-weight: 700; }
+    .cmp-val { color: #93c5fd; font-weight: 700; font-size: 12.5px; }
+    .cmp-val-ov { color: #34d399; font-weight: 800; font-size: 12.5px; }
   </style>
 </head>
 <body>
@@ -80,7 +122,7 @@
         <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
           <li>Gebunden an 1 PC</li>
           <li>Kein Tablet- / Hotspot-Support</li>
-          <li>ETB, Lagekarte, Schadenskonten, Kräfte, Umzug, Kontakte, Vordrucke &amp; Werkzeuge</li>
+          <li>Einsatz (ETB, Lagekarte, Schadenskonten, Kräfte), Kontakte &amp; Vordrucke</li>
         </ul>
       </div>
 
@@ -90,7 +132,7 @@
         <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
           <li>Gebunden an 1 PC</li>
           <li>Bis zu 1 Tablet im Hotspot</li>
-          <li>Alle Module inkl. BR, ASÜ, Material, Wetter, Stab &amp; Übergabe-PDF</li>
+          <li>Alle Einsatzarten, Fachmodule, Werkzeuge &amp; Übergabepaket (PDF)</li>
         </ul>
       </div>
 
@@ -135,6 +177,253 @@
           <button type="button" class="btn btn-primary" onclick="sendOrderMail()">Per E-Mail absenden</button>
           <button type="button" class="btn btn-ghost" onclick="copyOrderCode()">Bestellcode kopieren</button>
         </div>
+      </div>
+    </div>
+
+    <!-- DETAILLIERTE FUNKTIONS- & MODULÜBERSICHT -->
+    <div class="panel">
+      <h3 style="margin:0 0 6px 0; color:#60a5fa;">Detaillierter Funktions- &amp; Modulvergleich</h3>
+      <p style="margin:0 0 14px 0; color:#94a3b8; font-size:12.5px;">
+        Alle Module und Funktionen der drei Lizenzstufen im direkten Überblick.
+      </p>
+
+      <div class="cmp-wrap">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th style="text-align:left;">Modul / Funktion</th>
+              <th class="cmp-c" style="color:#f8fafc;">Basis</th>
+              <th class="cmp-c" style="color:#60a5fa;">Pro</th>
+              <th class="cmp-c" style="color:#34d399;">OV-Lizenz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ZENTRALE & SYSTEM -->
+            <tr><td colspan="4" class="cmp-cat">Zentrale, Lizenz &amp; Systemfunktionen</td></tr>
+            <tr>
+              <td>Gerätebindung</td>
+              <td class="cmp-c cmp-val">1 PC</td>
+              <td class="cmp-c cmp-val">1 PC</td>
+              <td class="cmp-c cmp-val-ov">OV-weit</td>
+            </tr>
+            <tr>
+              <td>Hotspot-Sync &amp; Einsatztablets (inkl. Rechteverwaltung &amp; Kurzchat)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-val">1 Tablet</td>
+              <td class="cmp-c cmp-val-ov">Unbegrenzt</td>
+            </tr>
+            <tr>
+              <td>100 % Offline-Betrieb &amp; Offline-Karten-Download</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Einsatzleit-Zentrale (Multi-Einsatz-Verwaltung mit strikter Datentrennung)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Einstellbarer PIN-Schutz (Programmstart &amp; kritische Aktionen)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Divera 24/7 Alarm-Übernahme &amp; JSON-Gesamtbackup</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Übergabepaket (PDF-Komplettexport: ETB, Funkplan, ASÜ, Lagebericht)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+
+            <!-- EINSATZARTEN -->
+            <tr><td colspan="4" class="cmp-cat">Einsatzarten</td></tr>
+            <tr>
+              <td>Realeinsatz – Einsatztagebuch (ETB / Fb Fü 2, PDF &amp; SHA-256)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Realeinsatz – Interaktive Lagekarte (inkl. Zeichenwerkzeuge)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Realeinsatz – Schadenskonten-Verwaltung</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Realeinsatz – Kräfte-, Fahrzeug-, FMS-Status- &amp; Helferverwaltung</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Realeinsatz – Lagebericht-Generator</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Umzüge &amp; Streckendienst (Sperrstellen, Zeitplan, Logistik)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Bereitstellungsraum (BR: Meldekopf, Satellitenkarte, Stellplätze, Laufzettel)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+
+            <!-- FACHMODULE -->
+            <tr><td colspan="4" class="cmp-cat">Fachmodule</td></tr>
+            <tr>
+              <td>Kommunikation &amp; Kontaktverzeichnis (Stamm-/Einsatzkontakte, Fb Fü 45, Skizze &amp; Mermaid)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Vordrucke &amp; Erfassungsbögen (THW-Führung, Einheiten, EBB, Word/PDF)</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Atemschutz (AGT / ASÜ: Truppüberwachung, Totmannwarner, Flaschenpool)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Materialverwaltung (Bestand, Ausgabe &amp; Rücknahme)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Wettererfassung &amp; Lagebedingungen</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Nachschlagewerk &amp; Objektpläne</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Stabsarbeit (S1–S6: Lagefeststellungen, Aufträge, Schichtbesetzung)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+
+            <!-- WERKZEUGE · FÜHRUNG & LAGE -->
+            <tr><td colspan="4" class="cmp-cat">Werkzeuge · Führung &amp; Lage</td></tr>
+            <tr>
+              <td>Koordinaten-Umrechner (WGS84 / DMS / UTM / MGRS)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Schicht-, Ablöse- &amp; Verpflegungsrechner (Fb Fü 42)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Marschverband-, Kolonnenrechner &amp; LKW-Routenplaner</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Gefahrenzonen- &amp; Wind-Assistent (inkl. ERICards-Suche &amp; Karten-PDF)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Hochwasser-Pegeltrendrechner</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>QR-Code-Generator (Hotspot, BR-Stellplätze &amp; Material)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+
+            <!-- WERKZEUGE · FACHTECHNIK -->
+            <tr><td colspan="4" class="cmp-cat">Werkzeuge · Fachtechnik</td></tr>
+            <tr>
+              <td>Betriebsstoff &amp; Laufzeiten (Verbrauchs-Tracker &amp; Tankprognose)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Pumpen &amp; Schlauchstrecken (FGr WP / Bergung)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Stromerzeuger &amp; Phasenlast (NEA / L1–L3)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Greifzug &amp; Anschlagmittel (MZ 16 / MZ 32)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Abstütz- &amp; Trümmerlast-Rechner (ASH / EGS)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Sandsack-Rechner (Deich- &amp; Hochwasserschutz)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Beleuchtungsplaner (Presets &amp; eigene Lux-Eingabe)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Gefahrgut / ERICards (Offline-ADR- &amp; Einsatzmaßnahmen-Datenbank)</td>
+              <td class="cmp-c cmp-no">–</td>
+              <td class="cmp-c cmp-yes">✓</td>
+              <td class="cmp-c cmp-yes">✓</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

@@ -4,47 +4,59 @@
 
 ## Funktionen
 
-### 1. Einsatzführung & Lagedarstellung
+### 1. Zentrale & Systemfunktionen
+- Einsatzleit-Zentrale (Dashboard): Verwaltung beliebig vieler Einsätze mit strikter Datentrennung, einsatzspezifischem Setup (Einsatz, Umzug, BR), Divera-24/7-Alarmübernahme, dauerhafter Stammdatenspeicherung und komplettem JSON-Backup.
+- Einsatztagebuch (ETB / Fb Fü 2): Einsatzspezifisches, revisionssicheres Tagebuch mit automatischen Modul-Einträgen, Storno-Funktion, PDF-Archivierung und SHA-256-Integritätskette.
+- Offline-Hotspot & Tablet-Sync: Lokaler Server für Einsatztablets mit Zufalls-PIN, QR-Login, feingranularer Rechte- und Rollenverwaltung (Betrachter/Bearbeiter/Gesperrt) sowie integriertem Einsatz-Kurzchat.
+- Offline-Karten: Gebietsspezifischer Download von Straßen- und Satellitenkarten für den 100-%-Offline-Betrieb auf Host und verbundenen Tablets.
+- Sicherheit & PIN-Schutz: Einstellbare Sicherheits-PIN für den Programmstart (Sperrbildschirm) sowie zur Absicherung kritischer Einstellungen und Handlungen.
+- Übergabepaket & Lizenzsystem: 1-Klick-Export eines vollständigen PDF-Übergabepakets (ETB, Funkplan, ASÜ, Lagebericht, Komplettsicherung), gestaffelte Lizenzstufen (Basis, Pro mit 1 Tablet, OV mit unbegrenzten Tablets) und integrierter Auto-Updater.
 
-- **Lagekarte:** Visuelle Darstellung und grafische Übersicht der aktuellen Einsatzlage, von Einheiten, Gefahren, Abschnitten und Ressourcen auf einer digitalen Karte.
-- **Einsatztagebuch (ETB):** Revisionssichere, chronologische Erfassung und Dokumentation aller relevanten Vorkommnisse, Meldungen, Befehle und Entscheidungen im Einsatzverlauf.
-- **Einsatzauftrag:** Erstellung, Zuweisung, Nachverfolgung und Dokumentation von konkreten Einsatzaufträgen an Einheiten und Taktische Verbände.
-- **Einsatz- & Abschnittsgliederung:** Strukturierte Abbildung der Führungsstruktur (Einsatzleitung, Einsatzabschnitte, Unterabschnitte und unterstellte Einheiten).
-- **Schadens- & Gefahrenstellenverwaltung:** Erfassung, Priorisierung und Statusverfolgung einzelner Einsatzstellen oder Schadensobjekte (besonders wichtig bei Flächenlagen wie Unwetter oder Hochwasser).
+### 2. Einsatzarten
+- Realeinsatz / Technische Hilfe: Zentrale Lageführung mit ETB, interaktiver Lagekarte (inkl. Zeichenwerkzeugen und Gefahrenzonen-Overlay), Schadenskonten, Kräfte-/FMS-Status- und Helferverwaltung, Kommunikation, ASÜ, Lagebericht und Vordrucken.
+- Umzüge & Streckendienst: Strecken- und Sperrstellenverwaltung auf der Karte, Zeitplan-Überwachung (Postenbezug, Vollsperrung, Freigabe), Kräfte-, Fahrzeug- und Logistikkoordination.
+- Bereitstellungsraum (BR): Meldekopf-Erfassung mit strukturiertem BOS-Funkrufnamen-Generator, Satelliten- und Parkplatz-/Stellplatzkoordination, Infrastruktur-Planung und Laufzettel-Erstellung.
 
-### 2. Kommunikation & Informationsaustausch
-- **Nachrichten (Messenger):** Echtzeit-Kommunikation und strukturierter Austausch von Textnachrichten, Lagemeldungen und Vierfach-Vordrucken zwischen Einsatzkräften und der Einsatzleitung.
-- **Kommunikationsskizze:** Erstellung und grafische Darstellung der Funk-, Rufgruppen- und Kommunikationsstruktur im Einsatz.
-- **Kontakte & Nachschlagewerke:** Zentrale Verwaltung von Ansprechpartnern sowie Bereitstellung und Durchsuchung von Dokumenten, Vorschriften, Merkblättern und Fachinformationen für den Einsatz.
-- **Objektpläne:** Verwaltung, Durchsuchung und Anzeige von Feuerwehr-, Einsatz- und Gebäudeobjektplänen zur schnellen Orientierung vor Ort.
+### 3. Fachmodule
+- Kommunikation & Kontaktverzeichnis: Dauerhaftes Stamm- und einsatzbezogenes Kontaktverzeichnis, Funkplan (Fb Fü 45 inkl. Word-/PDF-Export) sowie visuelle Kommunikationsskizze mit eigenen Ebenen und offline-fähigem Mermaid-Diagramm-Editor/-Export.
+- Atemschutz (AGT / ASÜ): Live-Truppüberwachung mit Zeit- und Druckkontrolle, Totmannwarner-Check, Regenerationszeiten, Flaschen-/Materialpool und ASÜ-PDF-Export.
+- Vordrucke & Erfassungsbögen: Digitale THW-Führungsvordrucke, Einheiten-Formulare und EBB-Erfassungsbögen mit automatischer Datenübernahme und Word-/PDF-Export.
+- Materialverwaltung: Bestands-, Ausgabe- und Rücknahmenachweis für Geräte und Einsatzmittel.
+- Wettererfassung: Protokollierung von Temperatur, Windrichtung/-stärke, Niederschlag und Unwetterwarnungen mit direkter Übernahme in das Gefahrenzonen-Modul.
+- Nachschlagewerk & Objektpläne: Offline-Sammlung für Vorschriften, Melde-/Stärkeschemata sowie eigene Gebäude- und Objektpläne.
+- Stabsarbeit (S1–S6): Strukturierte Verwaltung von Sachgebieten, Lagefeststellungen, Stabsaufträgen und Schichtbesetzungen.
 
-### 3. Kräfte- & Ressourcenmanagement (S1 / S4)
-- **Kräfteverwaltung:** Erfassung, Organisation und Verwaltung von Einsatzkräften sowie deren Qualifikationen, Verfügbarkeit und Zuweisung im Einsatz.
-- **Fahrzeugverwaltung:** Erfassung, Verwaltung und Statusübersicht (FMS-Status) von Einsatzfahrzeugen und deren taktischer Ausstattung.
-- **Materialverwaltung:** Verwaltung, Ausgabe und Nachverfolgung von Einsatzmaterial, Gerätschaften und Verbrauchsgütern im Einsatz.
-- **Verpflegungs- & Ablöseplanung:** Bedarfsberechnung und zeitliche Planung von Schichtwechseln, Ruhezeiten sowie Verpflegungs- und Unterbringungskapazitäten bei Langzeiteinsätzen.
+### 4. Werkzeuge · Führung & Lage
+- Koordinaten (UTM / MGRS / GPS): Umrechnung zwischen WGS84 (Dezimalgrad/DMS), UTM und MGRS mit direkter Übernahme in die Lagekarte.
+- Schicht & Verpflegung (Fb Fü 42): Berechnung von Personalbedarf (6h/8h/12h), Schichtwechselzeiten und Verpflegungsrationen.
+- Marschverband & LKW-Routenplaner: Kolonnenberechnung (Marschlänge, Durchlaufzeit, Halte, Kraftstoff, Marschbefehl) kombiniert mit einem LKW-Routenplaner (Gewicht, Höhe, Breite, Länge, Achslast, ADR) auf interaktiver Karte.
+- Gefahrenzonen & Wind: Berechnung und Darstellung von 3 Schutzzonen (Gefahr, Dekon, Absperrung) und Wind-Ausbreitungssektor mit integrierter ERICards-Gefahrstoffsuche, direktem Lagekarten-Sprung und PDF-Export inklusive Lagekarten-Hintergrund.
+- Hochwasser-Pegeltrend: Protokollierung von Pegelständen mit Steig-/Fallrate (cm/h) und Alarm-Prognose.
+- QR-Code-Generator: Erstellung druckbarer QR-Schilder für Tablet-Hotspot, WLAN, BR-Stellplätze und Material.
 
-### 4. Bereitstellungsraum (BR)
-- **BR-Verwaltung:** Erfassung, Registrierung und Organisation von anrückenden Einheiten, Einsatzkräften und Fahrzeugen im Bereitstellungsraum.
-- **BR-Karte:** Kartendarstellung und geografische Übersicht des Bereitstellungsraums inklusive Parkplatzkoordinationssystem und Stellplatzzuweisung.
-- **BR-Einsatzauftrag:** Direkte Erstellung, Übermittlung und Abrufverwaltung von Einsatzaufträgen an im Bereitstellungsraum wartende Einheiten.
+### 5. Werkzeuge · Fachtechnik
+- Betriebsstoff & Laufzeiten: Kraftstoffbedarfsrechner, Verbrauchs-Tracker und Laufzeitprognose für Fahrzeuge und Aggregate.
+- Pumpen & Schlauchstrecken: Berechnung von Förderhöhe, Schlauch-Reibungsverlusten (F/A/B/C) und Verstärkerpumpen für FGr WP / Bergung.
+- Stromerzeuger & Phasenlast: Auslastungs-, Schieflast- und Anlaufstrom-Prüfung (L1–L3) für NEA / FGr E.
+- Greifzug & Anschlagmittel: Zugkraftberechnung (MZ 16 / MZ 32), Flaschenzug-Umlenkrollen und Anschlagwinkel.
+- Abstütz- & Trümmerlast: Berechnung von Bauteil-/Trümmergewichten, Deckenabstützung, Stützenanzahl und Rastermaß (ASH / EGS).
+- Sandsack-Rechner: Bedarfsberechnung für Sandsäcke und Sandmenge (in Tonnen) nach Bauweise, Länge und Dammhöhe.
+- Beleuchtungsplaner: Flächen- und Lichtstromberechnung mit Presets oder eigener Lux-Eingabe inklusive LED-Leistung, Strahler-/Powermoon-Richtwerten und Aggregatgröße (kVA).
+- Gefahrgut / ERICards: Komplette Offline-Datenbank für UN-Nummern, ADR-Stoffe, Kemler-Zahlen und ERICards-Einsatzmaßnahmen.
 
-### 5. Atemschutz & Gefahrgut (CBRN)
-- **Atemschutzüberwachung:** Digitale Zeit-, Druck- und Statusüberwachung von Atemschutztrupps im Einsatz inklusive automatischer Warn- und Rückzugsalarmierung.
-- **Atemschutzsammelstelle:** Verwaltung und Koordination von Atemschutzkräften, Reservegeräten und Flaschenpools an einer zentralen Sammelstelle.
-- **GAMS-Regel & Gefahrgut:** Interaktives Handlungsschema für Gefahrguteinsätze (**G**efahren erkennen, **A**bsperren, **M**enschenrettung, **S**pezialkräfte) inklusive Stoffdatenbank und Absperrradien.
 
-### 6. Fachrechner & Logistik-Tools
-- **Betriebsstoffrechner:** Berechnung und Verwaltung des Betriebsstoff- und Kraftstoffbedarfs für Einsatzfahrzeuge, Aggregate und Pumpen.
-- **Laufzeiten / Spritverbrauch:** Echtzeit-Überwachung und Prognose von Restlaufzeiten sowie des aktuellen Kraftstoffverbrauchs laufender Aggregate und Fahrzeuge.
-- **Sandsackrechner:** Berechnung des Bedarfs an Sandsäcken, Füllmaterial, Verbauzeit, Personal und Transportkapazitäten für Hochwassereinsätze.
-- **Förderstrecken- & Pumpenrechner:** Berechnung von Druckverlusten, benötigten Pumpenabständen und Wassermengen über lange Wegstrecken (relevant für Feuerwehr und THW).
+## Lizenzmodell
 
-### 7. System, Vernetzung & Dokumentation
-- **Synchronisation über Hotspot (Offline-Mesh):** Automatische lokale Synchronisation mehrerer Endgeräte über einen lokalen WLAN-Hotspot des Hauptgeräts inklusive Rollen- und Rechteverwaltung (Betrachter, Bearbeiter) – komplett ohne Internetverbindung; perspektivisch erweiterbar durch Benutzerkonten und lokalen Serverbetrieb (z. B. auf einem Raspberry Pi).
-- **Tableteinbindung (Web-Client):** Bereitstellung der Benutzeroberfläche über einen lokalen Webserver im Browser, sodass Einsatztablets und mobile Endgeräte ohne zusätzliche App-Installation sofort arbeiten können.
-- **Einsatzabschluss & Export:** Automatisierte Erstellung eines gesamten Einsatzberichts (PDF/Excel/JSON) inklusive Einsatztagebuch, Lagekarten-Snapshots, Kräfteübersicht und Funkskizze für die Nachbereitung und Abrechnung.
-- **Offline-Kartenmaterial:** Vorab-Download und lokale Speicherung von Kartenkacheln (inkl. Hydranten, Rettungspunkten und Topografie) für den vollwertigen Einsatz ohne Mobilfunknetz.
+| **Gerätebindung** | 1 PC | 1 PC | OV-weit (keine Bindung) |
+| **Offline-Betrieb & Offline-Karten** | Ja | Ja | Ja |
+| **PIN-Schutz (Start & kritische Aktionen)** | Ja | Ja | Ja |
+| **Realeinsatz (ETB, Lagekarte, Schadenskonten, Kräfte)** | Ja | Ja | Ja |
+| **Kontakte, Funkplan & Vordrucke** | Ja | Ja | Ja |
+| **Umzüge / Streckendienst & Bereitstellungsraum (BR)** | – | Ja | Ja |
+| **Weitere Fachmodule (AGT/ASÜ, Material, Wetter, Stab, Nachschlagewerk)** | – | Ja | Ja |
+| **Alle Werkzeuge (Führung & Lage + Fachtechnik)** | – | Ja | Ja |
+| **Übergabepaket (PDF-Komplettexport)** | – | Ja | Ja |
+| **Hotspot-Sync & Einsatztablets** | – | Bis zu **1 Tablet** | **Unbegrenzt** |
 
 
 ## **Roadmap**
