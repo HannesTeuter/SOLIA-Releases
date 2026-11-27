@@ -13,7 +13,7 @@
 - Übergabepaket & Lizenzsystem: 1-Klick-Export eines vollständigen PDF-Übergabepakets (ETB, Funkplan, ASÜ, Lagebericht, Komplettsicherung), gestaffelte Lizenzstufen (Basis, Pro mit 1 Tablet, OV mit unbegrenzten Tablets) und integrierter Auto-Updater.
 
 ### 2. Einsatzarten
-- Realeinsatz / Technische Hilfe: Zentrale Lageführung mit ETB, interaktiver Lagekarte (inkl. Zeichenwerkzeugen und Gefahrenzonen-Overlay), Schadenskonten, Kräfte-/FMS-Status- und Helferverwaltung, Kommunikation, ASÜ, Lagebericht und Vordrucken.
+- Einsatz / Technische Hilfe: Zentrale Lageführung mit ETB, interaktiver Lagekarte (inkl. Zeichenwerkzeugen und Gefahrenzonen-Overlay), Schadenskonten, Kräfte-/FMS-Status- und Helferverwaltung, Kommunikation, ASÜ, Lagebericht und Vordrucken.
 - Umzüge & Streckendienst: Strecken- und Sperrstellenverwaltung auf der Karte, Zeitplan-Überwachung (Postenbezug, Vollsperrung, Freigabe), Kräfte-, Fahrzeug- und Logistikkoordination.
 - Bereitstellungsraum (BR): Meldekopf-Erfassung mit strukturiertem BOS-Funkrufnamen-Generator, Satelliten- und Parkplatz-/Stellplatzkoordination, Infrastruktur-Planung und Laufzettel-Erstellung.
 
@@ -58,11 +58,11 @@
 | **7**  | Divera 24/7 Alarm-Übernahme &amp; JSON-Gesamtbackup                                             | ✓         | ✓        | ✓             |
 | **8**  | Übergabepaket (PDF-Komplettexport: ETB, Funkplan, ASÜ, Lagebericht)                             | –         | ✓        | ✓             |
 | **9**  | Einsatzarten                                                                                    |           |          |               |
-| **10** | Realeinsatz – Einsatztagebuch (ETB / Fb Fü 2, PDF &amp; SHA-256)                                | ✓         | ✓        | ✓             |
-| **11** | Realeinsatz – Interaktive Lagekarte (inkl. Zeichenwerkzeuge)                                    | ✓         | ✓        | ✓             |
-| **12** | Realeinsatz – Schadenskonten-Verwaltung                                                         | ✓         | ✓        | ✓             |
-| **13** | Realeinsatz – Kräfte-, Fahrzeug-, FMS-Status- &amp; Helferverwaltung                            | ✓         | ✓        | ✓             |
-| **14** | Realeinsatz – Lagebericht-Generator                                                             | –         | ✓        | ✓             |
+| **10** | Einsatz – Einsatztagebuch (ETB / Fb Fü 2, PDF &amp; SHA-256)                                | ✓         | ✓        | ✓             |
+| **11** | Einsatz – Interaktive Lagekarte (inkl. Zeichenwerkzeuge)                                    | ✓         | ✓        | ✓             |
+| **12** | Einsatz – Schadenskonten-Verwaltung                                                         | ✓         | ✓        | ✓             |
+| **13** | Einsatz – Kräfte-, Fahrzeug-, FMS-Status- &amp; Helferverwaltung                            | ✓         | ✓        | ✓             |
+| **14** | Einsatz – Lagebericht-Generator                                                             | –         | ✓        | ✓             |
 | **15** | Umzüge &amp; Streckendienst (Sperrstellen, Zeitplan, Logistik)                                  | –         | ✓        | ✓             |
 | **16** | Bereitstellungsraum (BR: Meldekopf, Satellitenkarte, Stellplätze, Laufzettel)                   | –         | ✓        | ✓             |
 | **17** | Fachmodule                                                                                      |           |          |               |
