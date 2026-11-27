@@ -101,9 +101,9 @@
 
 
 ### Geplant
-Raspberry-Pi basierte Serveranwendung
+- Raspberry-Pi basierte Serveranwendung
 
----
+
 
 ## Lizenz
 
