@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THW FOKUS – Lizenz registrieren &amp; bestellen</title>
+  <title>SOLIA – Lizenz registrieren &amp; bestellen</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -66,10 +66,10 @@
 <body>
   <div class="wrap">
     <div class="hero">
-      <span style="background:#003399; color:#fff; font-size:11px; font-weight:800; padding:3px 9px; border-radius:4px;">THW FOKUS · LIZENZBESTELLUNG</span>
+      <span style="background:#003399; color:#fff; font-size:11px; font-weight:800; padding:3px 9px; border-radius:4px;">SOLIA · LIZENZBESTELLUNG</span>
       <h1 style="margin:10px 0 6px 0; font-size:24px;">Gerät registrieren &amp; Lizenz bestellen</h1>
       <p style="margin:0; color:#94a3b8; font-size:13.5px; line-height:1.55;">
-        Wähle die passende Lizenzstufe für deinen Zugtrupp oder Ortsverband. Nach Aktivierung läuft THW FOKUS im Einsatz offline.
+        Wähle die passende Lizenzstufe für dich oder deinen Ortsverband. Nach Aktivierung läuft SOLIA im Einsatz offline.
       </p>
     </div>
 
@@ -78,7 +78,7 @@
         <strong style="font-size:16px;">Einzelplatz Basis</strong>
         <div class="price">Günstiger Einzel-PC</div>
         <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
-          <li>Gebunden an 1 PC (Geräte-ID)</li>
+          <li>Gebunden an 1 PC</li>
           <li>Bis zu 1 Tablet im Hotspot</li>
           <li>ETB, Lagekarte, Schadenskonten, Kräfte, Umzug, Kontakte, Vordrucke &amp; Werkzeuge</li>
         </ul>
@@ -88,7 +88,7 @@
         <strong style="font-size:16px;">Einzelplatz Pro</strong>
         <div class="price">Komplettpaket 1 PC</div>
         <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
-          <li>Gebunden an 1 PC (Geräte-ID)</li>
+          <li>Gebunden an 1 PC</li>
           <li>Bis zu 4 Tablets im Hotspot</li>
           <li>Alle Module inkl. BR, ASÜ, Material, Wetter, Stab &amp; Übergabe-PDF</li>
         </ul>
@@ -98,9 +98,9 @@
         <strong style="font-size:16px;">Ortsverband / FüSt (OV-weit)</strong>
         <div class="price">Alle Geräte im OV</div>
         <ul style="padding-left:18px; font-size:12.5px; color:#cbd5e1; line-height:1.6;">
-          <li>Keine Geräte-ID-Bindung innerhalb des OV</li>
+          <li>Keine Gerätebindung innerhalb des OV</li>
           <li>Unbegrenzte Tablets im Hotspot</li>
-          <li>Voller Funktionsumfang + OV-Branding</li>
+          <li>Voller Funktionsumfang</li>
         </ul>
       </div>
     </div>
@@ -119,8 +119,8 @@
       </div>
 
       <div id="buy-dev-wrap" style="margin-bottom:12px;">
-        <label class="lbl">Geräte-ID aus THW FOKUS (bei Einzelplatz-Lizenz Pflicht) *</label>
-        <input type="text" id="buy-device" class="inp" style="font-family:Consolas,monospace;" placeholder="FOKUS-XXXX-XXXX-XXXX">
+        <label class="lbl">Geräte-ID aus SOLIA (bei Einzelplatz-Lizenz Pflicht) *</label>
+        <input type="text" id="buy-device" class="inp" style="font-family:Consolas,monospace;" placeholder="SOLIA-XXXX-XXXX-XXXX">
       </div>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -141,7 +141,7 @@
 
   <script>
     // KONFIGURATION: Hier deine Kontakt-E-Mail und optional Stripe / Lemon Squeezy Payment-Links eintragen!
-    const SELLER_EMAIL = 'fokus.softwareinfo@gmail.com';
+    const SELLER_EMAIL = 'solia.softwareinfo@gmail.com';
     const CHECKOUT_LINKS = {
       SINGLE_BASIC: '', // Optional: z. B. 'https://dein-shop.lemonsqueezy.com/buy/...'
       SINGLE_PRO:   '',
@@ -171,8 +171,8 @@
       const email = document.getElementById('buy-email').value.trim();
       const deviceId = selectedTier === 'OV_UNLIMITED' ? '*' : document.getElementById('buy-device').value.trim().toUpperCase();
       if (!licensee || !email) { alert('Bitte Ortsverband/Name und E-Mail eingeben.'); return null; }
-      if (selectedTier !== 'OV_UNLIMITED' && !deviceId.startsWith('FOKUS-')) {
-        alert('Bitte eine gültige Geräte-ID aus THW FOKUS (beginnt mit FOKUS-...) eingeben.');
+      if (selectedTier !== 'OV_UNLIMITED' && !deviceId.startsWith('SOLIA-')) {
+        alert('Bitte eine gültige Geräte-ID aus SOLIA (beginnt mit SOLIA-...) eingeben.');
         return null;
       }
       return { tier: selectedTier, licensee, email, deviceId, createdAt: new Date().toISOString().slice(0, 10) };
@@ -181,7 +181,7 @@
     function submitOrderRequest() {
       const data = collectOrderData();
       if (!data) return;
-      lastOrderCode = 'FOKUS-REQ-' + strToB64Url(JSON.stringify(data));
+      lastOrderCode = 'SOLIA-REQ-' + strToB64Url(JSON.stringify(data));
       document.getElementById('order-code-out').value = lastOrderCode;
       document.getElementById('order-out-box').style.display = 'block';
     }
@@ -193,9 +193,9 @@
     function sendOrderMail() {
       const data = collectOrderData();
       if (!data) return;
-      const subj = encodeURIComponent(`THW FOKUS Lizenzbestellung (${data.tier}) – ${data.licensee}`);
+      const subj = encodeURIComponent(`SOLIA Lizenzbestellung (${data.tier}) – ${data.licensee}`);
       const body = encodeURIComponent(
-        `Hallo,\n\nhiermit möchten wir eine THW FOKUS Lizenz bestellen:\n\n` +
+        `Hallo,\n\nhiermit möchten wir eine SOLIA Lizenz bestellen:\n\n` +
         `Lizenztyp:  ${data.tier}\n` +
         `Lizenznehmer: ${data.licensee}\n` +
         `Geräte-ID:  ${data.deviceId}\n` +
@@ -215,7 +215,7 @@
       window.location.href = url;
     }
 
-    // Automatische Übernahme von ?device=FOKUS-... aus activate.html!
+    // Automatische Übernahme von ?device=SOLIA-... aus activate.html!
     (function initBuyPage() {
       const params = new URLSearchParams(window.location.search);
       const dev = params.get('device');
