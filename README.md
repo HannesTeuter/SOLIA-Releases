@@ -47,16 +47,49 @@
 
 ## Lizenzmodell
 
-| **Gerätebindung** | 1 PC | 1 PC | OV-weit (keine Bindung) |
-| **Offline-Betrieb & Offline-Karten** | Ja | Ja | Ja |
-| **PIN-Schutz (Start & kritische Aktionen)** | Ja | Ja | Ja |
-| **Realeinsatz (ETB, Lagekarte, Schadenskonten, Kräfte)** | Ja | Ja | Ja |
-| **Kontakte, Funkplan & Vordrucke** | Ja | Ja | Ja |
-| **Umzüge / Streckendienst & Bereitstellungsraum (BR)** | – | Ja | Ja |
-| **Weitere Fachmodule (AGT/ASÜ, Material, Wetter, Stab, Nachschlagewerk)** | – | Ja | Ja |
-| **Alle Werkzeuge (Führung & Lage + Fachtechnik)** | – | Ja | Ja |
-| **Übergabepaket (PDF-Komplettexport)** | – | Ja | Ja |
-| **Hotspot-Sync & Einsatztablets** | – | Bis zu **1 Tablet** | **Unbegrenzt** |
+| **#**  | **Modul / Funktion**                                                                            | **Basis** | **Pro**  | **OV-Lizenz** |
+|--------|-------------------------------------------------------------------------------------------------|-----------|----------|---------------|
+| **1**  | Zentrale, Lizenz &amp; Systemfunktionen                                                         |           |          |               |
+| **2**  | Gerätebindung                                                                                   | 1 PC      | 1 PC     | OV-weit       |
+| **3**  | Hotspot-Sync &amp; Einsatztablets (inkl. Rechteverwaltung &amp; Kurzchat)                       | –         | 1 Tablet | Unbegrenzt    |
+| **4**  | 100 % Offline-Betrieb &amp; Offline-Karten-Download                                             | ✓         | ✓        | ✓             |
+| **5**  | Einsatzleit-Zentrale (Multi-Einsatz-Verwaltung mit strikter Datentrennung)                      | ✓         | ✓        | ✓             |
+| **6**  | Einstellbarer PIN-Schutz (Programmstart &amp; kritische Aktionen)                               | ✓         | ✓        | ✓             |
+| **7**  | Divera 24/7 Alarm-Übernahme &amp; JSON-Gesamtbackup                                             | ✓         | ✓        | ✓             |
+| **8**  | Übergabepaket (PDF-Komplettexport: ETB, Funkplan, ASÜ, Lagebericht)                             | –         | ✓        | ✓             |
+| **9**  | Einsatzarten                                                                                    |           |          |               |
+| **10** | Realeinsatz – Einsatztagebuch (ETB / Fb Fü 2, PDF &amp; SHA-256)                                | ✓         | ✓        | ✓             |
+| **11** | Realeinsatz – Interaktive Lagekarte (inkl. Zeichenwerkzeuge)                                    | ✓         | ✓        | ✓             |
+| **12** | Realeinsatz – Schadenskonten-Verwaltung                                                         | ✓         | ✓        | ✓             |
+| **13** | Realeinsatz – Kräfte-, Fahrzeug-, FMS-Status- &amp; Helferverwaltung                            | ✓         | ✓        | ✓             |
+| **14** | Realeinsatz – Lagebericht-Generator                                                             | –         | ✓        | ✓             |
+| **15** | Umzüge &amp; Streckendienst (Sperrstellen, Zeitplan, Logistik)                                  | –         | ✓        | ✓             |
+| **16** | Bereitstellungsraum (BR: Meldekopf, Satellitenkarte, Stellplätze, Laufzettel)                   | –         | ✓        | ✓             |
+| **17** | Fachmodule                                                                                      |           |          |               |
+| **18** | Kommunikation &amp; Kontaktverzeichnis (Stamm-/Einsatzkontakte, Fb Fü 45, Skizze &amp; Mermaid) | ✓         | ✓        | ✓             |
+| **19** | Vordrucke &amp; Erfassungsbögen (THW-Führung, Einheiten, EBB, Word/PDF)                         | ✓         | ✓        | ✓             |
+| **20** | Atemschutz (AGT / ASÜ: Truppüberwachung, Totmannwarner, Flaschenpool)                           | –         | ✓        | ✓             |
+| **21** | Materialverwaltung (Bestand, Ausgabe &amp; Rücknahme)                                           | –         | ✓        | ✓             |
+| **22** | Wettererfassung &amp; Lagebedingungen                                                           | –         | ✓        | ✓             |
+| **23** | Nachschlagewerk &amp; Objektpläne                                                               | –         | ✓        | ✓             |
+| **24** | Stabsarbeit (S1–S6: Lagefeststellungen, Aufträge, Schichtbesetzung)                             | –         | ✓        | ✓             |
+| **25** | Werkzeuge · Führung &amp; Lage                                                                  |           |          |               |
+| **26** | Koordinaten-Umrechner (WGS84 / DMS / UTM / MGRS)                                                | –         | ✓        | ✓             |
+| **27** | Schicht-, Ablöse- &amp; Verpflegungsrechner (Fb Fü 42)                                          | –         | ✓        | ✓             |
+| **28** | Marschverband-, Kolonnenrechner &amp; LKW-Routenplaner                                          | –         | ✓        | ✓             |
+| **29** | Gefahrenzonen- &amp; Wind-Assistent (inkl. ERICards-Suche &amp; Karten-PDF)                     | –         | ✓        | ✓             |
+| **30** | Hochwasser-Pegeltrendrechner                                                                    | –         | ✓        | ✓             |
+| **31** | QR-Code-Generator (Hotspot, BR-Stellplätze &amp; Material)                                      | –         | ✓        | ✓             |
+| **32** | Werkzeuge · Fachtechnik                                                                         |           |          |               |
+| **33** | Betriebsstoff &amp; Laufzeiten (Verbrauchs-Tracker &amp; Tankprognose)                          | –         | ✓        | ✓             |
+| **34** | Pumpen &amp; Schlauchstrecken (FGr WP / Bergung)                                                | –         | ✓        | ✓             |
+| **35** | Stromerzeuger &amp; Phasenlast (NEA / L1–L3)                                                    | –         | ✓        | ✓             |
+| **36** | Greifzug &amp; Anschlagmittel (MZ 16 / MZ 32)                                                   | –         | ✓        | ✓             |
+| **37** | Abstütz- &amp; Trümmerlast-Rechner (ASH / EGS)                                                  | –         | ✓        | ✓             |
+| **38** | Sandsack-Rechner (Deich- &amp; Hochwasserschutz)                                                | –         | ✓        | ✓             |
+| **39** | Beleuchtungsplaner (Presets &amp; eigene Lux-Eingabe)                                           | –         | ✓        | ✓             |
+| **40** | Gefahrgut / ERICards (Offline-ADR- &amp; Einsatzmaßnahmen-Datenbank)                            | –         | ✓        | ✓             |
+
 
 
 ## **Roadmap**
