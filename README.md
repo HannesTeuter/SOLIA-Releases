@@ -9,8 +9,6 @@
 - **Lagekarte:** Visuelle Darstellung und grafische Übersicht der aktuellen Einsatzlage, von Einheiten, Gefahren, Abschnitten und Ressourcen auf einer digitalen Karte.
 - **Einsatztagebuch (ETB):** Revisionssichere, chronologische Erfassung und Dokumentation aller relevanten Vorkommnisse, Meldungen, Befehle und Entscheidungen im Einsatzverlauf.
 - **Einsatzauftrag:** Erstellung, Zuweisung, Nachverfolgung und Dokumentation von konkreten Einsatzaufträgen an Einheiten und Taktische Verbände.
-- **Stabsarbeit:** Unterstützung, Koordination und strukturierte Dokumentation der Arbeit des Einsatzleiterstabes und der einzelnen Stabsfunktionen (S1–S6) im Einsatz.
-- **Wettererfassung:** Erfassung, Dokumentation und Überwachung von lokalen Wetterdaten und Witterungsbedingungen im Einsatzbereich.
 - **Einsatz- & Abschnittsgliederung:** Strukturierte Abbildung der Führungsstruktur (Einsatzleitung, Einsatzabschnitte, Unterabschnitte und unterstellte Einheiten).
 - **Schadens- & Gefahrenstellenverwaltung:** Erfassung, Priorisierung und Statusverfolgung einzelner Einsatzstellen oder Schadensobjekte (besonders wichtig bei Flächenlagen wie Unwetter oder Hochwasser).
 
@@ -52,10 +50,13 @@
 ## **Roadmap**
 
 ### In Arbeit
+- **Wettererfassung:** Erfassung, Dokumentation und Überwachung von lokalen Wetterdaten und Witterungsbedingungen im Einsatzbereich.
+- **Stabsarbeit:** Unterstützung, Koordination und strukturierte Dokumentation der Arbeit des Einsatzleiterstabes und der einzelnen Stabsfunktionen (S1–S6) im Einsatz.
 - **Modul Nachschlagewerk**: Verwaltung und Koordination von Atemschutzkräften und -geräten an einer zentralen Sammelstelle
 
 
 ### Geplant
+Raspberry-Pi basierte Serveranwendung
 
 ---
 
